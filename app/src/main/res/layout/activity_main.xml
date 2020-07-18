@@ -58,7 +58,8 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/ll_button_regist_login"
         android:layout_margin="16dp"
         android:layout_below="@+id/ll_lupa_password"
         android:layout_width="match_parent"
@@ -83,6 +84,14 @@
             android:textAllCaps="false"
             android:textColor="#ffffff" />
 
-    </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_to_list"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/ll_button_regist_login"
+        android:text="Move to list page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

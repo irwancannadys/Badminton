@@ -14,6 +14,7 @@ public class HomeActivity extends AppCompatActivity {
     EditText etUsername;
     EditText etPassword;
     Button btnLogin;
+    Button btnMoveToList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.et_username);
         etPassword = findViewById(R.id.et_password);
         btnLogin = findViewById(R.id.btn_login);
+        btnMoveToList = findViewById(R.id.btn_to_list);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +32,19 @@ public class HomeActivity extends AppCompatActivity {
                initUsername();
             }
         });
+
+        btnMoveToList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveToPageList();
+            }
+        });
+
+    }
+
+    private void moveToPageList(){
+        Intent moveToPageList = new Intent(this, ListActivity.class);
+        startActivity(moveToPageList);
     }
 
     private void initUsername() {
