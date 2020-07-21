@@ -21,4 +21,5 @@ public class SecondActivity extends AppCompatActivity {
 
         textviewUsername.setText(getUsername);
     }
+
 }
